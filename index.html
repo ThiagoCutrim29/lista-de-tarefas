@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE TAREFA</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="titulo"> LISTA DE TAREFAS DIARIAS</h1>
+    <form id="formtf" class="formulario">
+
+        <label for="inputAddress">DATA:</label>
+        <input type="text" class="inputs" id="calendario" data-index="new"  required />
+
+
+        <label> HORA:</label>
+        <input type="time" placeholder="" id="hora" data-index="new" required>
+
+
+        <label> TAREFA:</label>
+        <textarea rows="10" id="tarefa" data-index="new" required></textarea>
+
+        <button id="enviar">ENVIAR</button>
+    </form>
+    
+    <div>
+        <table id="tbtarefa">
+            <thead>
+                <tr>
+                    <th>DATA</th>
+                    <th>HORA</th>
+                    <th>TAREFA</th>
+                    <th>AÇÃO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    
+    <script src="index.js"></script>
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("#calendario").datepicker();
+    });
+</script>
